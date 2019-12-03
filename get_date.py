@@ -83,9 +83,9 @@ def result(file_name):
 	return l
 
 
-l_date = result('/home/lucifer/acadgild/project/fyle_assignment/fyle_final/static/uploads/25ee2c0d.jpeg')
+'''l_date = result('/home/lucifer/acadgild/project/fyle_assignment/fyle_final/static/uploads/25ee2c0d.jpeg')
 if l_date!=None:
 	for i in l_date:
 		print(i)
 else:
-	print("I can not find the date")
+	print("I can not find the date")'''
