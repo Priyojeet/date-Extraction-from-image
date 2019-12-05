@@ -17,7 +17,8 @@ import os
 from flask import Flask, render_template, request
 import cv2
 from get_date import result
-from werkzeug import secure_filename
+#from werkzeug import secure_filename
+from werkzeug.utils import secure_filename
 
 
 # define a folder to store and later serve the images
@@ -65,7 +66,7 @@ def upload_page():
 			# call the function on it
 			extracted_date = result(UPLOAD_FOLDER+filename)
 			dates = ', '
-			if extracted_date != None:
+			if extracted_date != None and len(extracted_date)!=0:
 				dates = dates.join(extracted_date)
 			else:
 				dates = "sorry! I can not find the date, please try with another image."

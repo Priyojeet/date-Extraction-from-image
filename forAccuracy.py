@@ -1,10 +1,10 @@
 #!/usr/bin/env python
-#title           :get_date.py
+#title           :forAccuracy.py
 #description     :Finding the date from an image.
 #author          :Priyojeet Bhunia
 #date            :03/12/2019
 #version         :0.0
-#usage           :python get_date.py
+#usage           :python forAccuracy.py
 #python_version  :3.7.5  
 #==============================================================================
 
@@ -24,58 +24,58 @@ def result(file_name):
 	m = getRaw_date(s)
 	l = checkForDate(m)
 	
-	if l==None or len(l)==0 or date.today()<datetime.strptime(l[0], "%Y-%m-%d").date():
+	if l==None or len(l)==0:
 		s = simple_ocr(set_image_dpi(file_name))
 		m = getRaw_date(s)
 		l = checkForDate(m)
 
-	if l==None or len(l)==0 or date.today()<datetime.strptime(l[0], "%Y-%m-%d").date():
+	if l==None or len(l)==0:
 		s = extraction(set_image_dpi(file_name))
 		m = getRaw_date(s)
 		l = checkForDate(m)
 
-	if l==None or len(l)==0 or date.today()<datetime.strptime(l[0], "%Y-%m-%d").date():
+	if l==None or len(l)==0:
 		s = simple_ocr(noise_remove(file_name))
 		m = getRaw_date(s)
 		l = checkForDate(m)
 
-	if l==None or len(l)==0 or date.today()<datetime.strptime(l[0], "%Y-%m-%d").date():
+	if l==None or len(l)==0:
 		s = extraction(noise_remove(file_name))
 		m = getRaw_date(s)
 		l = checkForDate(m)
 
-	if l==None or len(l)==0 or date.today()<datetime.strptime(l[0], "%Y-%m-%d").date():
+	if l==None or len(l)==0:
 		s = simple_ocr(remove_noise(file_name))
 		m = getRaw_date(s)
 		l = checkForDate(m)
 
-	if l==None or len(l)==0 or date.today()<datetime.strptime(l[0], "%Y-%m-%d").date():
+	if l==None or len(l)==0:
 		s = extraction(remove_noise(file_name))
 		m = getRaw_date(s)
 		l = checkForDate(m)
 
-	if l==None or len(l)==0 or date.today()<datetime.strptime(l[0], "%Y-%m-%d").date():
+	if l==None or len(l)==0:
 		s = simple_ocr(sl_otsuThresold(file_name))
 		m = getRaw_date(s)
 		l = checkForDate(m)
 
-	if l==None or len(l)==0 or date.today()<datetime.strptime(l[0], "%Y-%m-%d").date():
+	if l==None or len(l)==0:
 		s = extraction(sl_otsuThresold(file_name))
 		m = getRaw_date(s)
 		l = checkForDate(m)
 
-	if l==None or len(l)==0 or date.today()<datetime.strptime(l[0], "%Y-%m-%d").date():
+	if l==None or len(l)==0:
 		s = simple_ocr(sl_adaptiveThresold(file_name))
 		m = getRaw_date(s)
 		l = checkForDate(m)
 
-	if l==None or len(l)==0 or date.today()<datetime.strptime(l[0], "%Y-%m-%d").date():
+	if l==None or len(l)==0:
 		s = extraction(sl_adaptiveThresold(file_name))
 		m = getRaw_date(s)
 		l = checkForDate(m)
 
 	
-	if l==None or len(l) == 0 or date.today()<datetime.strptime(l[0], "%Y-%m-%d").date():
+	if l==None or len(l) == 0:
 		s = simple_ocr(file_name)
 		m = getRaw_date(s)
 		l = checkForDate(m)

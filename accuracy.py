@@ -13,15 +13,16 @@
 
 
 # importing libraries
-from get_date import result # local module
+from forAccuracy import result # local module
 import os
 
 
 path = '/home/lucifer/acadgild/project/fyle_assignment/Receipts/'
 l = os.listdir(path)
 images = [i for i in l if i.endswith('.jpeg')]
-#print(images)
+print(images)
 print(len(images))
+print(images.index('379efbfc.jpeg'))
 count = 0
 for image in images:
 	if result(path+image)!=None:
@@ -30,4 +31,4 @@ for image in images:
 print(count)
 
 accuracy = "{0:.2f}".format((count/len(images))*100)
-print("accuracy is:-",accuracy+"%")
+print("accuracy is:-",accuracy+"%") # 495 out of 595

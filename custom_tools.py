@@ -125,9 +125,12 @@ def getRaw_date(text):
         s=s+" "+i
     s = s.replace("’", "'")
     #declaring the regular expression for date formats
-    pat = ['\d{1,2}-\w{3}-\d{4}', '\w+\s\d{1,2},\s\d{4}', "\w{3}\d{1,2}'\d{2}", "\w{3}\.\d{1,2}'\d{2}", "\d{1,2}\s\w{3}'\d{2}", '\d{1,2}\s\w{3}\s\d{4}', '\d{1,2}\w{3}\d{2}',
-       '\d{1,2}\s\w{3},\s\d{4}', "\S+'\d{2}", '\d{1,2}/\w{3}/\d{2,4}', '\d{1,4}\.\d{1,2}\.\d{1,4}', '\d{1,4}/\d{1,2}/\d{1,4}', '\d{1,4}-\d{1,2}-\d{1,4}',
-           '\d{1,2}(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\d{2}', '\d{1,2}/\d{1,2}/\d{4}']
+    pat = ['\d{1,2}-\w{3}-\d{4}', '\w+\s\d{1,2},\s\d{4}', "\w{3}\d{1,2}'\d{2}", "\w{3}\.\d{1,2}'\d{2}",
+    		"\d{1,2}\s\w{3}'\d{2}", '\d{1,2}\s\w{3}\s\d{4}', '\d{1,2}\w{3}\d{2}',
+       		'\d{1,2}\s\w{3},\s\d{4}', "\S+'\d{2}", '\d{1,2}/\w{3}/\d{2,4}', '\d{1,4}\.\d{1,2}\.\d{1,4}',
+       		'\d{1,4}/\d{1,2}/\d{1,4}', '\d{1,4}-\d{1,2}-\d{1,4}',
+           	'\d{1,2}(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\d{2}', '\d{1,2}/\d{1,2}/\d{4}',
+           	'\d{1,2}-(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-\d{2}']
 
     l = []
     for regex in pat:
