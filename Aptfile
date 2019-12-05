@@ -2,6 +2,8 @@ libsm6
 libxrender1
 libfontconfig1
 libice6
+tesseract
 tesseract-ocr
 tesseract-ocr-eng
 imagemagick
+libtesseract-dev
